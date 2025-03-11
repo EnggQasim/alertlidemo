@@ -1,0 +1,6 @@
+alertli_search:
+  description: >
+    Task: {prompt}
+  expected_output: >
+    An answer to the question. and also share suggestion based on existing data. you can search any kind of thing after apply unfold text case.
+ 
