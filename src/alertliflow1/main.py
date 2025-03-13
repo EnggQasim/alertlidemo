@@ -18,16 +18,16 @@ class AlertliFlow(Flow[AlertliState]):
     @start()
     def alertli_flow(self):
         print("Generating alertli")
-        if self.state.prompt == "": 
-            self.state.prompt = "tell me about alertli"
-        result = AlertLiCrew().crew().kickoff(inputs={"prompt": self.state.prompt})
+        
+        inputs = {"prompt": "what is alertli?"}
+        result = AlertLiCrew().crew().kickoff(inputs=inputs)
 
         print("alertli generated", result.raw)
         self.state.alertli = result.raw
 
     @listen(alertli_flow)
     def save_alertli(self):
-        print("Saving alertli")
+        print("Final output", self.state.alertli)
         return self.state.alertli
 
 
