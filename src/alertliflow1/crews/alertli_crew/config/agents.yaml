@@ -14,6 +14,7 @@ manager:
     6. Maintain context across conversation turns to enable follow-up queries
     7. Apply appropriate hyper-personalization based on user history and preferences
     8. Monitor system performance and adapt routing strategies in real-time
+    user_query: {prompt}
 
 sql_expert:
   role: >
